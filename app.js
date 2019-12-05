@@ -20,9 +20,10 @@ app.get('/', function (req, res) {
 });
 
 const httpmethods = require('./routes/httpmethods');
-// Import my test routes into the path '/test'
 app.use('/method', httpmethods);
 
+const trace = require('./routes/trace');
+app.use('/trace', trace);
 
 app.listen(port, function () {
   console.log('Listening on port ' + port);
