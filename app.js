@@ -13,6 +13,8 @@ app.use(function(req, res, next) {
   next();
 });
 
+app.use(express.static('static'));
+
 app.get('/get', function (req, res) {
   res.send('HTTP GET');
 });
