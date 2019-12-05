@@ -15,21 +15,14 @@ app.use(function(req, res, next) {
 
 app.use(express.static('static'));
 
-app.get('/get', function (req, res) {
-  res.send('HTTP GET');
+app.get('/', function (req, res) {
+  res.send("Jubin's server is alive");
 });
 
-app.post('/post', function (req, res) {
-  res.send('HTTP POST');
-});
+const httpmethods = require('./routes/httpmethods');
+// Import my test routes into the path '/test'
+app.use('/method', httpmethods);
 
-app.put('/put', function (req, res) {
-  res.send('HTTP PUT');
-});
-
-app.delete('/delete', function (req, res) {
-  res.send('HTTP DELETE');
-});
 
 app.listen(port, function () {
   console.log('Listening on port ' + port);
