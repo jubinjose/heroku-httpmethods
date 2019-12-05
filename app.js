@@ -3,8 +3,8 @@ if (port == null || port == "") {
   port = 3000;
 }
 
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
 
 //Enable CORS for all resources
 app.use(function(req, res, next) {
