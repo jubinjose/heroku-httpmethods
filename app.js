@@ -1,6 +1,6 @@
 let port = process.env.PORT; // On Heroku this will be the PORT app can listen to. On local this will evaluate to null and thus 8000 will be used
 if (port == null || port == "") {
-  port = 3000;
+  port = 5500;
 }
 
 const express = require('express');
@@ -16,7 +16,7 @@ app.use(function(req, res, next) {
 app.use(express.static('static'));
 
 app.get('/', function (req, res) {
-  res.send("Jubin's server is alive");
+  res.send("jj server is alive");
 });
 
 const httpmethods = require('./routes/httpmethods');
