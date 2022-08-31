@@ -31,4 +31,4 @@ jobs:
           ssh-add ~/.ssh/id_ed25519_github_actions # has to be done on every session/shell
           git pull origin main
           npm ci
-          pm2 restart ecosystem.config.js
+          pm2 restart ecosystem.config.js --env vps
