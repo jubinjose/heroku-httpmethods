@@ -1,6 +1,6 @@
 let port = process.env.PORT; // On Heroku this will be the PORT app can listen to. On local this will evaluate to null and thus 8000 will be used
 if (port == null || port == "") {
-  port = 5500;
+  //port = 5500; // gonna reply on pm2 to supply POR environment variable through ecosyste,.config.js file
 }
 
 const express = require('express');
